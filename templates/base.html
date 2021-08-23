@@ -4,7 +4,9 @@
 <head> {% load static %}
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+ 	<link href="assets/img/favicon.png" rel="icon">
+ 	 <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
   <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet" />
   <link rel="stylesheet" href="{% static 'css/animate.css' %}" />
   <link rel="stylesheet" href="{% static 'css/animate.min.css' %}" />
@@ -22,6 +24,7 @@
   <link rel="stylesheet" href="{% static 'css/style.css' %}" />
   <link rel="stylesheet" href="{% static 'css/timeline.min.css' %}" />
   <link rel="stylesheet" href="{% static 'css/version.css' %}" />
+	<link rel="stylesheet" href="{% static 'css/services.css' %}" />
 
 
 
@@ -55,14 +58,10 @@
 						<form role="form" class="form-horizontal">
 							<div class="form-group">
 								<div class="col-sm-12">
-									<input class="form-control" id="email1" placeholder="Name" type="text">
+									<input class="form-control" placeholder="Name" type="text">
 								</div>
 							</div>
-							<div class="form-group">
-								<div class="col-sm-12">
-									<input class="form-control" id="exampleInputPassword1" placeholder="Email" type="email">
-								</div>
-							</div>
+
 							<div class="row">
 								<div class="col-sm-10">
 									<button type="submit" class="btn btn-light btn-radius btn-brd grd1">
@@ -80,21 +79,7 @@
 									<input class="form-control" placeholder="Name" type="text">
 								</div>
 							</div>
-							<div class="form-group">
-								<div class="col-sm-12">
-									<input class="form-control" id="email" placeholder="Email" type="email">
-								</div>
-							</div>
-							<div class="form-group">
-								<div class="col-sm-12">
-									<input class="form-control" id="mobile" placeholder="Mobile" type="email">
-								</div>
-							</div>
-							<div class="form-group">
-								<div class="col-sm-12">
-									<input class="form-control" id="password" placeholder="Password" type="password">
-								</div>
-							</div>
+
 							<div class="row">
 								<div class="col-sm-10">
 									<button type="button" class="btn btn-light btn-radius btn-brd grd1">
@@ -124,10 +109,10 @@
 
 	<!-- Start header -->
 	<header class="top-navbar">
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<div class="container-fluid">
-				<a class="navbar-brand" href="index.html">
-					<img src="{% static 'images/logo.png' %" alt="" />
+		<nav class="navbar navbar-expand-lg navbar-light bg-light" >
+			<div class="container-fluid" >
+				<a class="navbar-brand" href="{% url 'index' %}" >
+					<img src="{% static 'images/jizzax-logo.png' %}" alt="" >
 				</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-host" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="icon-bar"></span>
@@ -136,14 +121,15 @@
 				</button>
 				<div class="collapse navbar-collapse" id="navbars-host">
 					<ul class="navbar-nav ml-auto">
+
 						<li class="nav-item active"><a class="nav-link" href="{% url 'index' %}">Bosh menyu</a></li>
                         <li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="dropdown-" data-toggle="dropdown">Raxbariyat </a>
 							<div class="dropdown-menu" aria-labelledby="dropdown-a">
-								<a class="dropdown-item" href="{% url 'namuna' %}">Boshqarma raxbariyati </a>
+								<a class="dropdown-item" href="{% url 'raxbariyat' %}">Boshqarma raxbariyati </a>
 								<a class="dropdown-item" href="#">Boshqarma apparati </a>
 								<a class="dropdown-item" href="#">Hududiy bo'limlar </a>
-                                <a class="dropdown-item" href="#">Hududiy bo'limlar </a>
+
                                 <a class="dropdown-item" href="#">Boshqarma tasarufidagi tashkilotlar </a>
                                 <a class="dropdown-item" href="#">Boshqarma tuzilmasi </a>
 							</div>
@@ -151,7 +137,7 @@
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="dropdown-as" data-toggle="dropdown">Meyoriy xujjatlar</a>
 							<div class="dropdown-menu" aria-labelledby="dropdown-a">
-								<a class="dropdown-item" href="{% url 'namuna' %}">Ta`limga oid qonunlar </a>
+								<a class="dropdown-item" href="#">Ta`limga oid qonunlar </a>
 								<a class="dropdown-item" href="#">Vazirlar mahkamasi qarorlari </a>
 								<a class="dropdown-item" href="#">Prezident farmoni va qarorlari </a>
                                 <a class="dropdown-item" href="#">Boshqarma boshlig'i buyruqlari</a>
