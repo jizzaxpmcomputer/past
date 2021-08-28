@@ -1,11 +1,19 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView,ListView
 from . models import Document
 # Create your views here.
-class TalimgaOidView(TemplateView):
-    model = Document
-    context_object_name = 'document'
-    template_name = 'talimga_oid.html'
+# class TalimgaOidView(ListView):
+#     model = Document
+#     template_name = 'talimga_oid.html'
+
+def talimgaOid(request):
+    context = {}
+    context["doc"] = Document.objects.all()
+
+    # if Document.document_types == 'talimga_oid':
+
+    return render(request, "talimga_oid.html", context)
+
 
 
 
