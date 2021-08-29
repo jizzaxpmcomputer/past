@@ -8,14 +8,15 @@ from . models import Document
 
 def talimgaOid(request):
     context = {}
-    context["doc"] = Document.objects.all()
-
-    # if Document.document_types == 'talimga_oid':
-
+    context["doc"] = Document.objects.filter(user_type='talimga_oid')
     return render(request, "talimga_oid.html", context)
 
 
 
+def vazirlarMahkamasi(request):
+    context = {}
+    context["doc"] = Document.objects.filter(user_type='vazirlar_mahkamasi')
+    return render(request, "vazirlar_mahkamasi.html", context)
 
 class VazirlarMahkamasiView(TemplateView):
     template_name = 'vazirlar_mahkamasi.html'

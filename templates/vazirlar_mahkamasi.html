@@ -1,4 +1,85 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
-<h1>Vazirlar mahkamasiga oid hujjatlar</h1>
+<style>
+    #overviews {
+   	width:100%;
+    background: url({% static 'images/banner.jpg' %})center center / cover no-repeat ;
+
+
+
+
+
+}
+
+
+</style>
+
+<!--<div class="main">-->
+
+<!--    {% for document in doc %}.-->
+<!--    {{ document.name }}<br/>-->
+<!--    {{document.date}}<br>-->
+
+<!--    {{document.user_type}}-->
+<!--    <a href="{{ document.url }} ">yo'l</a>-->
+
+
+<!--    <hr/>-->
+
+<!--    {% endfor %}-->
+
+<!--</div>-->
+
+
+<div id="overviews" class="section wb">
+    <div class="container">
+        <div class="section-title row text-center">
+            <div class="container text-center">
+                <h1 style="color:#fff; font-size: 4em;">Vazirlar Mahkamasi qarorlari</h1>
+            </div>
+        </div><!-- end title -->
+
+        <hr class="invis">
+
+        <div class="row">
+            {% for document in doc %}
+
+            <div class="col-lg-4 col-md-6 col-12">
+
+                <div class="blog-item">
+
+                    <div class="image-blog">
+                        <img src="https://lh3.googleusercontent.com/proxy/9pAZcSD9uzoeWhM_vu6ws4IhTb2y9n1Ex0h8ac-keGDMHS89WRnBUFdEripS_WpBUf_dZ8VN_nXe8DXAmbmVEC-RBIWTe0HhTGqDMZ4PEt_OcCLmJ8rtenU5AQcYC7jFzLY8Jyj2lsGwiRc3z_socKaP5obm" alt="" class="img-fluid">
+                    </div>
+                    <div class="meta-info-blog">
+                        <span><i class="fa fa-calendar"></i> <a href="#">{{document.date}} | Author: {{document.author}}</a> </span>
+<!--                        <span><i class="fa fa-tag"></i>  <a href="#">News</a> </span>-->
+<!--                        <span><i class="fa fa-comments"></i> <a href="#">12 Comments</a></span>-->
+                    </div>
+                    <div class="blog-title">
+                        <h2><a href="#" title="">Vazirlar Mahkamasi qarorlari</a></h2>
+                    </div>
+                    <div class="blog-desc">
+                        <p>{{document.name}}</p>
+                    </div>
+                    <div class="blog-button">
+                        <a class="hover-btn-new orange" href="#"><span>Read More<span></a>
+                    </div>
+
+                </div>
+
+
+            </div><!-- end col -->
+
+ {% endfor %}
+        </div><!-- end row -->
+
+
+
+
+    </div><!-- end container -->
+</div><!-- end section -->
+
+
 {% endblock content %}
