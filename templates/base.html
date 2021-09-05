@@ -2,43 +2,42 @@
 {% load static %}
 <html lang="en">
 <head> {% load static %}
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
- 	<link href="assets/img/favicon.png" rel="icon">
- 	 <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-  <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet" />
-  <link rel="stylesheet" href="{% static 'css/animate.css' %}" />
-  <link rel="stylesheet" href="{% static 'css/animate.min.css' %}" />
-  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
-  <link rel="stylesheet" href="{% static 'css/bootstrap-touch-slider.css' %}" />
-  <link rel="stylesheet" href="{% static 'css/colors.css' %}" />
-	<link rel="stylesheet" href="{% static 'css/custom.css' %}" />
-  <link rel="stylesheet" href="{% static 'css/flaticon.css' %}" />
-  <link rel="stylesheet" href="{% static 'css/font-awesome.css' %}" />
-  <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" />
-  <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}" />
-  <link rel="stylesheet" href="{% static 'css/pr_loading.css' %}" />
-  <link rel="stylesheet" href="{% static 'css/prettyPhoto.css' %}" />
-  <link rel="stylesheet" href="{% static 'css/responsive.css' %}" />
-  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-  <link rel="stylesheet" href="{% static 'css/timeline.min.css' %}" />
-  <link rel="stylesheet" href="{% static 'css/version.css' %}" />
-	<link rel="stylesheet" href="{% static 'css/services.css' %}" />
-	<link rel="stylesheet" href="{% static 'css/counter.css' %}" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+          rel="stylesheet">
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet"/>
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/animate.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/bootstrap-touch-slider.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/colors.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/font-awesome.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/pr_loading.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/prettyPhoto.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/timeline.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/version.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/services.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/counter.css' %}"/>
 
 
+    <link rel="stylesheet" href="{% static 'fonts/flaticon/font/flaticon.css' %}"/>
+
+    <link rel="stylesheet" href="{% static 'css/aos.css' %}"/>
+    <link href="{% static 'css/jquery.mb.YTPlayer.min.css' %}" media="all" rel="stylesheet" type="text/css"/>
+
+    <link rel="stylesheet" href="{% static 'css/my.css' %}"/>
 
 
-  <link rel="stylesheet" href="{% static 'fonts/flaticon/font/flaticon.css' %}" />
-
-  <link rel="stylesheet" href="{% static 'css/aos.css' %}" />
-  <link href="{% static 'css/jquery.mb.YTPlayer.min.css' %}" media="all" rel="stylesheet" type="text/css" />
-
-  <link rel="stylesheet" href="{% static 'css/my.css' %}" />
-
-
-  <title>{% block title %}Bosh menyu{% endblock %}</title>
+    <title>{% block title %}Bosh menyu{% endblock %}</title>
 </head>
 <body class="">
 
@@ -100,183 +99,216 @@
 <!--	  </div>-->
 <!--	</div>-->
 
-    <!-- LOADER -->
-	<div id="preloader">
-		<div class="loader-container">
-			<div class="progress-br float shadow">
-				<div class="progress__item"></div>
-			</div>
-		</div>
-	</div>
-	<!-- END LOADER -->
+<!-- LOADER -->
+<div id="preloader">
+    <div class="loader-container">
+        <div class="progress-br float shadow">
+            <div class="progress__item"></div>
+        </div>
+    </div>
+</div>
+<!-- END LOADER -->
 
-	<!-- Start header -->
-	<header class="top-navbar">
-		<nav class="navbar navbar-expand-lg navbar-light bg-light" >
-			<div class="container-fluid" >
-				<a class="navbar-brand" href="{% url 'index' %}" >
-					<img src="{% static 'images/jizzax-logo.png' %}" alt="" >
-				</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-host" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbars-host">
-					<ul class="navbar-nav ml-auto">
+<!-- Start header -->
+<header class="top-navbar">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'index' %}">
+                <img src="{% static 'images/jizzax-logo.png' %}" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-host"
+                    aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbars-host">
+                <ul class="navbar-nav ml-auto">
 
-						<li class="nav-item active"><a class="nav-link" href="{% url 'index' %}">Bosh menyu</a></li>
-                        <li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="dropdown-" data-toggle="dropdown">Raxbariyat </a>
-							<div class="dropdown-menu" aria-labelledby="dropdown-a">
-								<a class="dropdown-item" href="{% url 'raxbariyat' %}">Boshqarma raxbariyati </a>
-								<a class="dropdown-item" href="{% url 'document:vazirlar_mahkamasi' %}">Boshqarma apparati </a>
-								<a class="dropdown-item" href="#">Hududiy bo'limlar </a>
-                                <a class="dropdown-item" href="#">Boshqarma tasarufidagi tashkilotlar </a>
-                                <a class="dropdown-item" href="#">Boshqarma tuzilmasi </a>
-							</div>
-						</li>
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="dropdown-as" data-toggle="dropdown">Meyoriy xujjatlar</a>
-							<div class="dropdown-menu" aria-labelledby="dropdown-a">
-								<a class="dropdown-item" href="{% url 'document:talim' %}">Ta`limga oid qonunlar </a>
-								<a class="dropdown-item" href="{% url 'document:vazirlar_mahkamasi' %}">Vazirlar mahkamasi qarorlari </a>
-								<a class="dropdown-item" href="{% url 'document:prezident_farmoni' %}">Prezident farmoni va qarorlari </a>
-                                <a class="dropdown-item" href="{% url 'document:boshqarma' %}">Boshqarma boshlig'i buyruqlari</a>
-                                <a class="dropdown-item" href="{% url 'document:xalq_talimi' %}">Xalq ta`limi vaziri buyruqlari </a>
-                                <a class="dropdown-item" href="#">Boshqa ta`limga oid hujjatlar </a>
-							</div>
-						</li>
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="dropdown_" data-toggle="dropdown">Ta`lim </a>
-							<div class="dropdown-menu" aria-labelledby="dropdown-a">
+                    <li class="nav-item active"><a class="nav-link" href="{% url 'index' %}">Bosh menyu</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown-"
+                           data-toggle="dropdown">Raxbariyat </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown-a">
+                            <a class="dropdown-item" href="{% url 'raxbariyat' %}">Boshqarma raxbariyati </a>
+                            <a class="dropdown-item" href="{% url 'vazirlar_mahkamasi' %}">Boshqarma apparati </a>
+                            <a class="dropdown-item" href="#">Hududiy bo'limlar </a>
+                            <a class="dropdown-item" href="#">Boshqarma tasarufidagi tashkilotlar </a>
+                            <a class="dropdown-item" href="#">Boshqarma tuzilmasi </a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown-as" data-toggle="dropdown">Meyoriy
+                            xujjatlar</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown-a">
+                            <a class="dropdown-item" href="{% url 'talim' %}">Ta`limga oid qonunlar </a>
+                            <a class="dropdown-item" href="{% url 'vazirlar_mahkamasi' %}">Vazirlar mahkamasi
+                                qarorlari </a>
+                            <a class="dropdown-item" href="{% url 'prezident_farmoni' %}">Prezident farmoni va
+                                qarorlari </a>
+                            <a class="dropdown-item" href="{% url 'boshqarma' %}">Boshqarma boshlig'i buyruqlari</a>
+                            <a class="dropdown-item" href="{% url 'xalq_talimi' %}">Xalq ta`limi vaziri buyruqlari </a>
+                            <a class="dropdown-item" href="#">Boshqa ta`limga oid hujjatlar </a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown_" data-toggle="dropdown">Ta`lim </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown-a">
 
-								<a class="dropdown-item" href="#">Ota - onalarga </a>
-								<a class="dropdown-item" href="#">Pedagoglarga </a>
-                                <a class="dropdown-item" href="#">Ustoz minbari </a>
-                                <a class="dropdown-item" href="#">Tahliliy malumotlar </a>
-                                <a class="dropdown-item" href="#">Imkoniyati cheklanganlarga </a>
-							</div>
-						</li>
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="dropdown_a" data-toggle="dropdown">Faoliyat </a>
-							<div class="dropdown-menu" aria-labelledby="dropdown-a">
+                            <a class="dropdown-item" href="#">Ota - onalarga </a>
+                            <a class="dropdown-item" href="#">Pedagoglarga </a>
+                            <a class="dropdown-item" href="#">Ustoz minbari </a>
+                            <a class="dropdown-item" href="#">Tahliliy malumotlar </a>
+                            <a class="dropdown-item" href="#">Imkoniyati cheklanganlarga </a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown_aaa"
+                           data-toggle="dropdown">Faoliyat </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown-a">
 
-								<a class="dropdown-item" href="#">E`lonlar</a>
-								<a class="dropdown-item" href="#">Ochiq malumotlar </a>
-                                <a class="dropdown-item" href="#">Tanlovlar </a>
+                            <a class="dropdown-item" href="#">E`lonlar</a>
+                            <a class="dropdown-item" href="#">Ochiq malumotlar </a>
+                            <a class="dropdown-item" href="#">Tanlovlar </a>
 
-								<a class="dropdown-item" href="#">Galeriya </a>
-                                <a class="dropdown-item" href="#">Media -reja </a>
-                                <a class="dropdown-item" href="#">OAV va Biz </a>
-                                <a class="dropdown-item" href="#">Matbuot anjumanlari</a>
-								<a class="dropdown-item" href="#">Hisobotlar </a>
-							</div>
-						</li>
+                            <a class="dropdown-item" href="#">Galeriya </a>
+                            <a class="dropdown-item" href="#">Media -reja </a>
+                            <a class="dropdown-item" href="#">OAV va Biz </a>
+                            <a class="dropdown-item" href="#">Matbuot anjumanlari</a>
+                            <a class="dropdown-item" href="#">Hisobotlar </a>
+                        </div>
+                    </li>
 
-						<li class="nav-item"><a class="nav-link" href="about.html">Yangiliklar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Yangiliklar</a></li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown_a"
+                           data-toggle="dropdown">{{user.username}} </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown-a">
+
+                            <a class="dropdown-item" href="{% url 'document_new' %}">Meyoriy hujjatlar qo'shish</a>
+                            <a class="dropdown-item" href="#">Yangiliklar qo'shish </a>
+                            <a class="dropdown-item" href="{% url 'logout' %}">Tizimdan chiqish </a>
 
 
 
-					</ul>
-<!--					<ul class="nav navbar-nav navbar-right">-->
-<!--                        <li><a class="hover-btn-new log orange" href="#" data-toggle="modal" data-target="#login"><span>Login</span></a></li>-->
-<!--                    </ul>-->
-				</div>
-			</div>
-		</nav>
-	</header>
+                        </div>
+                    </li>
+                    {% else %}
+
+
+                </ul>
+                 					<ul class="nav navbar-nav navbar-right">
+                                        <li><a class=" hover-btn-new log orange" href="{% url 'login' %}"  ><span>Login</span></a></li>
+                                    </ul>
+                {% endif %}
+<!--                <div class="dropdown show">-->
+<!--                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"-->
+<!--                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+<!--                        Nasimov Bekzod-->
+<!--                    </a>-->
+
+<!--                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">-->
+<!--                        <a class="dropdown-item" href="{% url 'document_new' %}">Meyoriy hujjatlar qo'shish</a>-->
+<!--                        <a class="dropdown-item" href="#">Yangiliklar qo'shish</a>-->
+<!--                        <a class="dropdown-item" href="#">Something else here</a>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+            </div>
+        </div>
+    </nav>
+</header>
 
 {% block content %}{% endblock content %}
 <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-xs-12">
-                    <div class="widget clearfix">
-                        <div class="widget-title">
-                            <h3>Jizzax viloyat xalq talim boshqarmasi</h3>
-                        </div>
-                        <p> Jizzax shahar bu yog'ini bilmeman</p>
-						<div class="widget-title">
-                            <h3>Ish vaqtlari</h3>
-                        </div>
-						<p> Dush - Juma:   9:00 dan 18:00 gacha</p>
-						<p> Tushlik: 13:00 dan 14:00 gacha</p>
-						<p>Shanba-Yakshanba : Yopiq</p>
-						<div class="footer-right">
-							<ul class="footer-links-soi">
-								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#"><i class="fa fa-github"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-								<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-							</ul><!-- end links -->
-						</div>
-                    </div><!-- end clearfix -->
-                </div><!-- end col -->
-
-				<div class="col-lg-4 col-md-4 col-xs-12">
-                    <div class="widget clearfix">
-                        <div class="widget-title">
-                            <h3>Sahifalar</h3>
-                        </div>
-                        <ul class="footer-links">
-                            <li><a href="#">Raxbariyat</a></li>
-                            <li><a href="#">Farmonlar</a></li>
-                            <li><a href="#">Ta`lim</a></li>
-							<li><a href="#">Faoliyat</a></li>
-							<li><a href="#">Yangiliklar</a></li>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-xs-12">
+                <div class="widget clearfix">
+                    <div class="widget-title">
+                        <h3>Jizzax viloyat xalq talim boshqarmasi</h3>
+                    </div>
+                    <p> Jizzax shahar bu yog'ini bilmeman</p>
+                    <div class="widget-title">
+                        <h3>Ish vaqtlari</h3>
+                    </div>
+                    <p> Dush - Juma: 9:00 dan 18:00 gacha</p>
+                    <p> Tushlik: 13:00 dan 14:00 gacha</p>
+                    <p>Shanba-Yakshanba : Yopiq</p>
+                    <div class="footer-right">
+                        <ul class="footer-links-soi">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-github"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                            <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
                         </ul><!-- end links -->
-                    </div><!-- end clearfix -->
-                </div><!-- end col -->
+                    </div>
+                </div><!-- end clearfix -->
+            </div><!-- end col -->
 
-                <div class="col-lg-4 col-md-4 col-xs-12">
-                    <div class="widget clearfix">
-                        <div class="widget-title">
-                            <h3>Biz bilan bog'lanish</h3>
-                        </div>
+            <div class="col-lg-4 col-md-4 col-xs-12">
+                <div class="widget clearfix">
+                    <div class="widget-title">
+                        <h3>Sahifalar</h3>
+                    </div>
+                    <ul class="footer-links">
+                        <li><a href="#">Raxbariyat</a></li>
+                        <li><a href="#">Farmonlar</a></li>
+                        <li><a href="#">Ta`lim</a></li>
+                        <li><a href="#">Faoliyat</a></li>
+                        <li><a href="#">Yangiliklar</a></li>
+                    </ul><!-- end links -->
+                </div><!-- end clearfix -->
+            </div><!-- end col -->
 
-                        <ul class="footer-links">
-                            <li><a href="mailto:#">info@yoursite.com</a></li>
-                            <li><a href="#">www.yoursite.com</a></li>
-                            <li>PO Box 16122 Collins Street West Victoria 8007 Australia</li>
-                            <li>+998 94 571 42 42</li>
-                        </ul><!-- end links -->
-                    </div><!-- end clearfix -->
-                </div><!-- end col -->
+            <div class="col-lg-4 col-md-4 col-xs-12">
+                <div class="widget clearfix">
+                    <div class="widget-title">
+                        <h3>Biz bilan bog'lanish</h3>
+                    </div>
 
-            </div><!-- end row -->
-        </div><!-- end container -->
-    </footer><!-- end footer -->
+                    <ul class="footer-links">
+                        <li><a href="mailto:#">info@yoursite.com</a></li>
+                        <li><a href="#">www.yoursite.com</a></li>
+                        <li>PO Box 16122 Collins Street West Victoria 8007 Australia</li>
+                        <li>+998 94 571 42 42</li>
+                    </ul><!-- end links -->
+                </div><!-- end clearfix -->
+            </div><!-- end col -->
 
-    <div class="copyrights">
-        <div class="container">
-            <div class="footer-distributed">
-                <div class="footer-center">
-                    <p class="footer-company-name">All Rights Reserved. &copy; 2018 <a href="#">SmartEDU</a> Design By : <a href="https://html.design/">html design</a></p>
-                </div>
+        </div><!-- end row -->
+    </div><!-- end container -->
+</footer><!-- end footer -->
+
+<div class="copyrights">
+    <div class="container">
+        <div class="footer-distributed">
+            <div class="footer-center">
+                <p class="footer-company-name">All Rights Reserved. &copy; 2018 <a href="#">SmartEDU</a> Design By : <a
+                        href="https://html.design/">html design</a></p>
             </div>
-        </div><!-- end container -->
-    </div><!-- end copyrights -->
+        </div>
+    </div><!-- end container -->
+</div><!-- end copyrights -->
 
-    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+<a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
 
 <script src="{% static 'js/01-custom-places-example.js' %}"></script>
-    <!-- ALL JS FILES -->
-      <script src="{% static 'js/all.js' %}"></script>
-    <!-- ALL PLUGINS -->
-    <script src="{% static 'js/custom.js' %}"></script>
-	<script src="{% static 'js/timeline.min.js' %}"></script>
+<!-- ALL JS FILES -->
+<script src="{% static 'js/all.js' %}"></script>
+<!-- ALL PLUGINS -->
+<script src="{% static 'js/custom.js' %}"></script>
+<script src="{% static 'js/timeline.min.js' %}"></script>
 
 
-
-	  <script src="{% static 'js/all.js' %}"></script>
-	  <script src="{% static 'js/custom.js' %}"></script>
-	  <script src="{% static 'js/mapsed.js' %}"></script>
-	  <script src="{% static 'js/modernizer.js' %}"></script>
-	  <script src="{% static 'js/timeline.min.js' %}"></script>
-		<script src="{% static 'js/counter.js' %}"></script>
-
+<script src="{% static 'js/all.js' %}"></script>
+<script src="{% static 'js/custom.js' %}"></script>
+<script src="{% static 'js/mapsed.js' %}"></script>
+<script src="{% static 'js/modernizer.js' %}"></script>
+<script src="{% static 'js/timeline.min.js' %}"></script>
+<script src="{% static 'js/counter.js' %}"></script>
 
 
 </body>

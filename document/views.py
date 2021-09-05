@@ -1,16 +1,16 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView,ListView
-from . models import Document
+from django.views.generic import TemplateView, ListView, DetailView, CreateView
+from .models import Document
+
+
 # Create your views here.
 # class TalimgaOidView(ListView):
 #     model = Document
 #     template_name = 'talimga_oid.html'
-
-def talimgaOid(request):
-    context = {}
-    context["doc"] = Document.objects.filter(user_type='talimga_oid')
-    return render(request, "talimga_oid.html", context)
-
+class TalimgaOidView(ListView):
+    model = Document
+    queryset = Document.objects.filter(user_type='talimga_oid')
+    template_name = 'talimga_oid.html'
 
 
 def vazirlarMahkamasi(request):
@@ -18,11 +18,15 @@ def vazirlarMahkamasi(request):
     context["doc"] = Document.objects.filter(user_type='vazirlar_mahkamasi')
     return render(request, "vazirlar_mahkamasi.html", context)
 
-class VazirlarMahkamasiView(TemplateView):
-    template_name = 'vazirlar_mahkamasi.html'
+
+class DocumentDetailView(DetailView):
+    model = Document
+    template_name = 'detail.html'
 
 
-class PrezidentFarmoniView(TemplateView):
+class PrezidentFarmoniView(ListView):
+    model = Document
+    queryset = Document.objects.filter(user_type='prezident_farmoni')
     template_name = 'prezident_farmoni.html'
 
 
@@ -32,3 +36,9 @@ class BoshqarmaBoshligiView(TemplateView):
 
 class XalqTalimiVaziriView(TemplateView):
     template_name = 'xalq_talimi.html'
+
+
+class DocumentNewView(CreateView):
+    model = Document
+    template_name = 'document_new.html'
+    fields = ['name', 'user_type', 'photo', 'author', 'url']

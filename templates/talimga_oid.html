@@ -20,18 +20,23 @@
     <div class="container">
 
         <div class="row">
-            {% for document in doc %}
+            {% for document in object_list %}
             <div class="col-lg-4 mb-4">
-
+                
                 <div class="card">
-                    <img src="https://uzedu.uz/uploads/2020/03/booooks-760x500.jpg" alt="" class="card-img-top">
+                    {% if document.photo %}
+                    <img src="{{ document.photo.url}}" alt="" class="card-img-top">
+                    {% else %}
+                    <img src="http://konservatoriya.uz/wp-content/uploads/2020/06/1584433657_a80aed6f758ecbcb7deddeff3b593ce0.jpg" alt="">
+                    {% endif %}
                     <div class="card-body">
                         <h5 class="card-title">Aftor:{{document.author}} | <span><i class="fa fa-calendar"></i> <a href="#">{{document.date}}</a> </span></h5>
                         <p class="card-text">{{document.name}}</p>
-                        <a href="" class="btn btn-outline-success btn-sm">Batafsil</a>
+                        <a href="{% url 'detail_view' document.pk %}" class="btn btn-outline-success btn-sm">Batafsil</a>
 
                     </div>
                 </div>
+                
 
             </div>
             {% endfor %}

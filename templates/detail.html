@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+
+
+     {% if document.photo %}
+        <div >
+            <img src="{{ document.photo.url}} " style="width:50%" alt="{{document.name}}">
+        </div>
+    {% endif %}<br>
+        <h2>{{document.name}}</h2>
+
+
+</div>
+
+{% endblock content %}

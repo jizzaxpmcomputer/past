@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth import get_user_model
+from django.urls import reverse_lazy, reverse
 
 # Create your models here.
 class Document(models.Model):
@@ -31,3 +32,6 @@ class Document(models.Model):
 
     class Meta:
         ordering = ['-date']
+
+    def get_absolute_url(self):
+        return reverse('detail_view', args=[str(self.id)])

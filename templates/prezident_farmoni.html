@@ -1,4 +1,26 @@
 {% extends 'base.html' %}
 {% block content %}
 <h1>Prezident farmoni va qarorlari</h1>
+
+<div class="container">
+    {% for document in object_list %}
+    <div class="card mb-3">
+        <div class="card-header">
+            <a href="{% url 'detail_view' document.pk %}" class="font-weight-bold">{{ document.name }}</a>
+            <p class="text-muted"> {{ document.author }} ga tegishli | {{document.date}}</p>
+        </div>
+
+        <div class="container">
+            <img src="{{ document.photo.url}}" style="width:50%" alt="{{object.title}}">
+
+        </div>
+
+
+
+
+
+
+    </div>
+    {% endfor %}
+</div>
 {% endblock content %}
