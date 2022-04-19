@@ -42,3 +42,5 @@ class DocumentNewView(CreateView):
     model = Document
     template_name = 'document_new.html'
     fields = ['name', 'user_type', 'photo', 'author', 'url']
+class igcse(TemplateView):
+    template_name = 'IGCSE.html'

@@ -9,6 +9,7 @@
     <link href="assets/img/favicon.png" rel="icon">
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/animate.css' %}"/>
     <link rel="stylesheet" href="{% static 'css/animate.min.css' %}"/>
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
@@ -27,6 +28,7 @@
     <link rel="stylesheet" href="{% static 'css/version.css' %}"/>
     <link rel="stylesheet" href="{% static 'css/services.css' %}"/>
     <link rel="stylesheet" href="{% static 'css/counter.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/add.css' %}"/>
 
 
     <link rel="stylesheet" href="{% static 'fonts/flaticon/font/flaticon.css' %}"/>
@@ -114,7 +116,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="{% url 'index' %}">
-                <img src="{% static 'images/jizzax-logo.png' %}" alt="">
+                <img src="{% static 'images/logoom.jpg' %}" alt="" style="width:70px; margin-left:50px;" data-target="_blank">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-host"
                     aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
@@ -125,21 +127,18 @@
             <div class="collapse navbar-collapse" id="navbars-host">
                 <ul class="navbar-nav ml-auto">
 
-                    <li class="nav-item active"><a class="nav-link" href="{% url 'index' %}">Bosh menyu</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="{% url 'index' %}">Home</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown-"
-                           data-toggle="dropdown">Raxbariyat </a>
+                           data-toggle="dropdown">Administration </a>
                         <div class="dropdown-menu" aria-labelledby="dropdown-a">
-                            <a class="dropdown-item" href="{% url 'raxbariyat' %}">Boshqarma raxbariyati </a>
-                            <a class="dropdown-item" href="{% url 'vazirlar_mahkamasi' %}">Boshqarma apparati </a>
-                            <a class="dropdown-item" href="#">Hududiy bo'limlar </a>
-                            <a class="dropdown-item" href="#">Boshqarma tasarufidagi tashkilotlar </a>
-                            <a class="dropdown-item" href="#">Boshqarma tuzilmasi </a>
+                            <a class="dropdown-item" href="{% url 'raxbariyat' %}">School authority </a>
+                            <a class="dropdown-item" href="{% url 'vazirlar_mahkamasi' %}">Teachers</a>
+
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdown-as" data-toggle="dropdown">Meyoriy
-                            xujjatlar</a>
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown-as" data-toggle="dropdown">Document</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown-a">
                             <a class="dropdown-item" href="{% url 'talim' %}">Ta`limga oid qonunlar </a>
                             <a class="dropdown-item" href="{% url 'vazirlar_mahkamasi' %}">Vazirlar mahkamasi
@@ -152,43 +151,39 @@
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdown_" data-toggle="dropdown">Ta`lim </a>
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown_" data-toggle="dropdown">IGSCE O Level </a>
                         <div class="dropdown-menu" aria-labelledby="dropdown-a">
 
-                            <a class="dropdown-item" href="#">Ota - onalarga </a>
-                            <a class="dropdown-item" href="#">Pedagoglarga </a>
-                            <a class="dropdown-item" href="#">Ustoz minbari </a>
-                            <a class="dropdown-item" href="#">Tahliliy malumotlar </a>
-                            <a class="dropdown-item" href="#">Imkoniyati cheklanganlarga </a>
+                            <a class="dropdown-item" href="#">O Level Syllabus </a>
+                            <a class="dropdown-item" href="#">O Note </a>
+                            <a class="dropdown-item" href="{% url 'igcse' %}">OL Topical Past Papers </a>
+                            <a class="dropdown-item" href="#">OL Topical Marking Scheme </a>
+                            <a class="dropdown-item" href="#">OL Yearly PP & MS </a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown_aaa"
-                           data-toggle="dropdown">Faoliyat </a>
+                           data-toggle="dropdown">AS A Level </a>
                         <div class="dropdown-menu" aria-labelledby="dropdown-a">
 
-                            <a class="dropdown-item" href="#">E`lonlar</a>
-                            <a class="dropdown-item" href="#">Ochiq malumotlar </a>
-                            <a class="dropdown-item" href="#">Tanlovlar </a>
-
-                            <a class="dropdown-item" href="#">Galeriya </a>
-                            <a class="dropdown-item" href="#">Media -reja </a>
-                            <a class="dropdown-item" href="#">OAV va Biz </a>
-                            <a class="dropdown-item" href="#">Matbuot anjumanlari</a>
-                            <a class="dropdown-item" href="#">Hisobotlar </a>
+                           <a class="dropdown-item" href="#">A Level Syllabus </a>
+                            <a class="dropdown-item" href="#">AS Note </a>
+                            <a class="dropdown-item" href="#">AS Topical Past Papers </a>
+                            <a class="dropdown-item" href="#">AS Topical Marking Scheme </a>
+                            <a class="dropdown-item" href="#">AS Yearly PP & MS </a>
                         </div>
                     </li>
 
-                    <li class="nav-item"><a class="nav-link" href="about.html">Yangiliklar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">News</a></li>
                     {% if user.is_authenticated %}
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown_a"
                            data-toggle="dropdown">{{user.username}} </a>
                         <div class="dropdown-menu" aria-labelledby="dropdown-a">
 
-                            <a class="dropdown-item" href="{% url 'document_new' %}">Meyoriy hujjatlar qo'shish</a>
-                            <a class="dropdown-item" href="#">Yangiliklar qo'shish </a>
-                            <a class="dropdown-item" href="{% url 'logout' %}">Tizimdan chiqish </a>
+                            <a class="dropdown-item" href="{% url 'document_new' %}">Document ADD</a>
+                            <a class="dropdown-item" href="#">News ADD </a>
+                            <a class="dropdown-item" href="{% url 'logout' %}">LOGOUT </a>
 
 
 
@@ -309,6 +304,7 @@
 <script src="{% static 'js/modernizer.js' %}"></script>
 <script src="{% static 'js/timeline.min.js' %}"></script>
 <script src="{% static 'js/counter.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 
 </body>
